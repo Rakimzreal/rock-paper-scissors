@@ -5,6 +5,7 @@ const score = {
 };
 
 
+
 function playGame(playerMove) {
     const computerMove = getComputerChoice();
 
@@ -49,7 +50,12 @@ function playGame(playerMove) {
         score.ties += 1;
     }
         
+    console.log(JSON.stringify(score));
 
+    localStorage.setItem('score', JSON.stringify(score));
+
+
+    
     console.log(result);
 
     alert(`You picked ${playerMove}, Computer picked ${computerMove}. ${result}
