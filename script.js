@@ -1,9 +1,9 @@
-let computerMove ;
+
 
 function getComputerChoice () {
     const randomNumber = Math.random();
 
-    
+    let computerMove ;
 
     if (randomNumber >= 0 && randomNumber < 1 / 3) {
          computerMove = 'Rock';
@@ -14,4 +14,6 @@ function getComputerChoice () {
     }
 
     console.log(computerMove);
+
+    return computerMove;
 }
