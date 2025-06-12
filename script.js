@@ -90,7 +90,7 @@ function playGame(playerMove) {
 
     roundsPlayed++;
 
-    console.log("Rounds played:", roundsPlayed, "Wins:", score.wins, "Losses:", score.losses);
+    console.log(`Rounds played: ${roundsPlayed}, Wins: ${score.wins}, Losses: ${score.losses} Ties: ${score.ties}`);
 
 
     if (roundsPlayed === 5) {
@@ -106,13 +106,7 @@ function playGame(playerMove) {
 
     }
     
-
     
-
-    
-    
-    alert(`You picked ${playerMove}, Computer picked ${computerMove}. ${result}
-Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 }
 
 
