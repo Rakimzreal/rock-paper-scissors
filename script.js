@@ -108,7 +108,24 @@ function playGame(playerMove) {
     
     
 }
+    function resetButton() {
+        
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    updateScoreElement();
 
+    localStorage.removeItem('score');
+    
+    roundsPlayed = 0;
+    gameOver = false;
+
+    console.log(`Rounds played: ${roundsPlayed}, Wins: ${score.wins}, Losses: ${score.losses} Ties: ${score.ties}`);
+
+    document.querySelector('.js-result').innerHTML = '';
+     document.querySelector('.js-gameMoves').innerHTML = '';
+    }
+    
 
 function getComputerChoice () {
     const randomNumber = Math.random();
