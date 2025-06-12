@@ -17,8 +17,7 @@ function updateResult(result) {
 }
 
 function updateGameMoves(playerMove, computerMove) {
-    document.querySelector('.js-gameMoves')
-    .innerHTML = `You picked ${playerMove}, Computer picked ${computerMove}`;
+    document.querySelector('.js-gameMoves').innerHTML = `You picked ${playerMove}, Computer picked ${computerMove}`;
 }
 
 function updateScoreElement() {document.querySelector('.js-score')
@@ -91,22 +90,27 @@ function playGame(playerMove) {
 
     roundsPlayed++;
 
-    if (score.wins === 3 || score.losses === 3 || roundsPlayed === 5) {
+    console.log("Rounds played:", roundsPlayed, "Wins:", score.wins, "Losses:", score.losses);
+
+
+    if (roundsPlayed === 5) {
         gameOver = true;
 
-    }
-    
-    let finalMessage;
-
-    if(score.wins > score.losses) {
+        if(score.wins > score.losses) {
         alert('Lucky you! You Won!');
     } else if (score.losses > score.wins) {
         alert('You lost, try again?');
     } else {
-        gameOver = false;
+        alert("It's a Tie, No one won!")
     }
 
-    alert(`${finalMessage}`);
+    }
+    
+
+    
+
+    
+    
     alert(`You picked ${playerMove}, Computer picked ${computerMove}. ${result}
 Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`);
 }

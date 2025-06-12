@@ -36,6 +36,13 @@
     updateScoreElement();
 
     localStorage.removeItem('score');
+    
+    roundsPlayed = 0;
+    gameOver = false;
+
+    document.querySelector('.js-result').innerHTML = '';
+     document.querySelector('.js-gameMoves').innerHTML = '';
+
     ">Reset Game</button>
     <script src="./script.js"></script>
 </body>
